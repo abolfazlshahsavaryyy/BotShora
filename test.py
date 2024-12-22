@@ -16,7 +16,7 @@ user_states = {}
 @bot.message_handler(commands=['start'])
 def start_command_handler(message):
     user_id = message.chat.id
-    bot.send_message(user_id, "سلام بر دانشجوی دانشگاه علم و صنعت مهندسی کامپیوتر لطفا پیام خود را بفرستید.")
+    bot.send_message(user_id, "سلام بر دانشجوی دانشگاه علم و صنعت مهندسی کامپیوتر لطفا پیام خود را ارسال کنید.")
     user_states[user_id] = "waiting_for_message"
 
 @bot.message_handler(func=lambda message: True)
